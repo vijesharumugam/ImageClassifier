@@ -31,8 +31,8 @@ def classify_image(model, image):
         return None
 def main():
     st.set_page_config(page_title="Image Classifier", page_icon=":camera:",layout="centered")
-    st.title("Image Classifier with MobileNetV2")   
-    st.write("Upload an image to classify it using MobileNetV2.")
+    st.title("Image Classifier")   
+    st.write("Upload an image to classify ")
 
     @st.cache_resource
     def load_cached_model():
