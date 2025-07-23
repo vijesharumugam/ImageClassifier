@@ -1,6 +1,6 @@
 streamlit
 tensorflow
-opencv-python
+opencv-python==4.9.0.80
 Pillow
 numpy
 # ... other dependencies ...
