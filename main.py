@@ -1,19 +1,13 @@
-import os
-import cv2
+import cv2 
 import numpy as np
 import streamlit as st
 # pyright: reportMissingImports=false
 from tensorflow.keras.applications.mobilenet_v2 import (
-    MobileNetV2,
+    MobileNetV2, 
     preprocess_input,
     decode_predictions
 )
 from PIL import Image
-
-# Start a virtual X server if running in Streamlit Cloud
-if 'STREAMLIT_SERVER_ADDRESS' in os.environ:
-    os.system("Xvfb :0 -screen 0 640x480x24 &")
-    os.environ['DISPLAY'] = ':0'
 
 def load_model():
     model = MobileNetV2(weights='imagenet')
@@ -35,16 +29,15 @@ def classify_image(model, image):
     except Exception as e:
         st.error(f"Error during classification: {e}")
         return None
-
 def main():
     st.set_page_config(page_title="Image Classifier", page_icon=":camera:",layout="centered")
-    st.title("Image Classifier")
+    st.title("Image Classifier")   
     st.write("Upload an image to classify ")
 
     @st.cache_resource
     def load_cached_model():
         return load_model()
-
+    
     model = load_cached_model()
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
