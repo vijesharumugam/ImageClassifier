@@ -1,6 +1,4 @@
+tensorflow==2.12.0
 opencv-python-headless==4.7.0.72
-streamlit
-tensorflow
-pillow
-numpy
-
+streamlit==1.25.0  # Or a stable version that works well with Python 3.9
+Pillow
