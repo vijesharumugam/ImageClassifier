@@ -32,3 +32,4 @@ Make sure you have Python 3.8 or above installed.
 ```bash
 git clone https://github.com/your-username/image-classifier-app.git
 cd image-classifier-app
+.venv\Scripts\python -m streamlit run main.py --server.port=8501

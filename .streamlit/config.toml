@@ -1,0 +1,7 @@
+[browser]
+# Disable Segment/analytics to avoid console warnings about blocked storage
+gatherUsageStats = false
+
+[server]
+headless = true
+port = 8501

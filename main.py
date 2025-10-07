@@ -1,6 +1,10 @@
+import os
+import warnings
 import cv2 
 import numpy as np
 import streamlit as st
+# Reduce TF logging before importing TF
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # 0=all,1=info,2=warning,3=error
 # pyright: reportMissingImports=false
 from tensorflow.keras.applications.mobilenet_v2 import (
     MobileNetV2, 
@@ -44,7 +48,7 @@ def main():
     if uploaded_file is not None:
         image = st.image(
             uploaded_file,caption = "Uploaded Image",
-            use_container_width = True
+            use_column_width=True
         )
         btn = st.button("Classify image")
         if btn:
