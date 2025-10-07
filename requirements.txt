@@ -1,4 +1,7 @@
 tensorflow==2.20.0
 streamlit==1.37.0
-opencv-python-headless==4.9.0.80
+# Pin NumPy compatible with Python 3.13 and TensorFlow 2.20
+numpy==2.1.3
+# OpenCV with Python 3.13 wheels
+opencv-python-headless==4.10.0.84
 Pillow==10.4.0
